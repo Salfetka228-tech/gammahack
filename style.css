@@ -126,29 +126,33 @@ button:active, select:active, .channel-button:active {
     transform: translateY(2px);
 }
 
-/* Адаптация для мобильных (max-width: 768px) */
-@media (max-width: 768px) {
+/* Адаптация для мобильных устройств (max-width: 600px) */
+@media (max-width: 600px) {
     .grid {
-        grid-gap: 8px;
+        grid-gap: 6px;
     }
 
     .grid button {
-        width: 60px;
-        height: 60px;
-        font-size: 18px;
+        width: 50px;
+        height: 50px;
+        font-size: 16px;
     }
 
     .channel-button, button, select {
-        width: 180px;
-        padding: 10px;
+        width: 160px;
+        padding: 10px 12px;
         font-size: 14px;
     }
 
     h1 {
-        font-size: 28px;
+        font-size: 24px;
     }
 
     .header-text {
-        font-size: 20px;
+        font-size: 18px;
+    }
+
+    .controls {
+        margin-top: 10px;
     }
 }
