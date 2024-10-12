@@ -1,0 +1,154 @@
+/* Основные стили */
+body {
+    background: linear-gradient(135deg, #1c1f36, #003366);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    max-width: 100%;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+/* Заголовок */
+.header-text {
+    color: #00ffaa;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    color: #00ffaa;
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+/* Сетка */
+.grid {
+    display: grid;
+    justify-content: center;
+    grid-gap: 10px;
+    margin-bottom: 20px;
+    transition: all 0.4s ease;
+}
+
+/* Ячейки по умолчанию */
+.grid button {
+    width: 80px;
+    height: 80px;
+    background-color: #2c2f33;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Ячейки с кристаллами */
+.grid button.active {
+    background: linear-gradient(145deg, #00ffaa, #00c0ff);
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 255, 170, 0.6);
+    border: 2px solid #00ffaa;
+}
+
+/* Hover эффект */
+.grid button:hover {
+    background-color: #00c0ff;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Кнопки и контролы */
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button, select, .channel-button {
+    width: 220px;
+    padding: 12px 15px;
+    margin: 10px 0;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    background-color: #00ffaa;
+    color: #1c1f36;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+}
+
+button:hover, select:hover, .channel-button:hover {
+    background-color: #00c0ff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+}
+
+button:active, select:active, .channel-button:active {
+    transform: translateY(2px);
+}
+
+/* Адаптация для мобильных (max-width: 768px) */
+@media (max-width: 768px) {
+    .grid {
+        grid-gap: 8px;
+    }
+
+    .grid button {
+        width: 60px;
+        height: 60px;
+        font-size: 18px;
+    }
+
+    .channel-button, button, select {
+        width: 180px;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .header-text {
+        font-size: 20px;
+    }
+}
